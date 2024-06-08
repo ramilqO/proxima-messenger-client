@@ -1,7 +1,7 @@
-import { Route } from "../../types/routes";
-import ChatList from "../ChatList/ChatList";
-import Login from "../Login/Login";
-import Register from "../Register/Register";
+import { Route } from "../../../types/routes";
+import ChatList from "../pages/ChatList/ChatList";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 
 export const publicRoutes: Route[] = [
     {

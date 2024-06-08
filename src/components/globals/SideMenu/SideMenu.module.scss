@@ -1,0 +1,15 @@
+.sideMenu {
+  width: 5%;
+  height: 100vh;
+  padding: 20px 10px;
+  background-color: gray;
+  backdrop-filter: blur(10px);
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

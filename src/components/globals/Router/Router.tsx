@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { publicRoutes, privateRoutes } from "./routes";
-import NotFound from "../NotFound/NotFound";
+import NotFound from "../pages/NotFound/NotFound";
 
-const isAuth = true;
+const isAuth = true;    //TODO: авторизация
 export default function Router() {  // у авторизованных пользователей нет доступа к publicRoutes
     return (
         <BrowserRouter>
