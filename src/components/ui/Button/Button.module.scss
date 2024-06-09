@@ -1,0 +1,42 @@
+@import '../../../variables.scss';
+
+.button {
+    border: 0;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.button:active {
+    background-color: $gray;
+    transform: translateY(1px);
+}
+
+.red {
+    background-color: $red;
+}
+
+.blue {
+    background-color: $blue;
+}
+
+.green {
+    background-color: $green;
+}
+
+.gray {
+    background-color: $gray;
+}
+
+.transparent {
+    background-color: transparent;
+}

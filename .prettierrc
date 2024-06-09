@@ -1,0 +1,18 @@
+{
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 120,
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "wrapLineLength": 120,
+    "endOfLine": "lf",
+    "jsxSingleQuote": true,
+    "jsxIndent": 4,
+    "reactBracketSameLine": false,
+    "reactIndentSize": 4,
+    "typescriptBracketSameLine": false,
+    "typescriptIndentSize": 4
+}
