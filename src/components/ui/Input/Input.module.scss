@@ -1,7 +1,7 @@
 @import '../../../variables.scss';
 
 .input {
-    padding: 5px;
+    padding: 3px;
     border: 0;
     border-radius: 7px;
     background-color: $gray;
@@ -16,8 +16,12 @@
     }
 
     &__elem::placeholder {
-        font-size: 14px;
-        font-weight: 700;
+        font-weight: 600;
+    }
+
+    &__elem:focus {
+        caret-color: #333;
+        color: #666;
     }
 
     &__elem:focus-visible {
