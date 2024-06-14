@@ -1,8 +1,9 @@
 import { RxAvatar } from "react-icons/rx";
 import Avatar from "../../ui/Avatar/Avatar";
 import styles from "./ChatItem.module.scss";
+import ChatSwitcher from "../../../store/ChatSwitcher.store";
 
-type TChat = {
+type TChatItem = {
     id: string;
     name: string;
     avatar?: string;
@@ -13,9 +14,9 @@ type TChat = {
     isGroupChat: boolean;
 }
 
-export default function ChatItem({ chat }: { chat: TChat }) {
+export default function ChatItem({ chat }: { chat: TChatItem }) {
     return (
-        <div className={styles.chatItem}>
+        <div className={styles.chatItem} onClick={() => ChatSwitcher.setCurrentChat(chat.id)}>
             <div className={styles.chatItem__wrapper}>
                 <div className={styles.chatItem__group}>
                     <div className={styles.chatItem__avatar}>{chat.avatar ? <Avatar size="md" src={chat.avatar} /> : <RxAvatar size={40} color="gray" />}</div>
@@ -24,7 +25,7 @@ export default function ChatItem({ chat }: { chat: TChat }) {
                         {chat.whoIsTypingNow ?
                             <p className={styles.chatItem__whoIsTyping}>{chat.whoIsTypingNow} печатает...</p> :
                             <p className={styles.chatItem__lastMessage}>
-                                {chat.isGroupChat && <p className={styles.chatItem__lastMessageAuthor}>{chat.lastMessageAuthor}: </p>}
+                                {chat.isGroupChat && <span className={styles.chatItem__lastMessageAuthor}>{chat.lastMessageAuthor}: </span>}
                                 {chat.lastMessage.length >= 60 ? chat.lastMessage.slice(0, 60) + "..." : chat.lastMessage}
                             </p>
                         }

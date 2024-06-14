@@ -1,11 +1,17 @@
-import { ReactNode } from "react";
+import Chat from "../Chat/Chat";
 import SideMenu from "../SideMenu/SideMenu";
+import ChatList from "../pages/ChatList/ChatList";
 
-export default function Layout({ children }: { children: ReactNode }) {
+import styles from "./Layout.module.scss";
+
+export default function Layout() {
     return (
-        <div style={{ display: "flex" }}>
+        <div className={styles.layout}>
             <SideMenu />
-            {children}
+            <ChatList />
+            <div className={styles.layout__mobile + " " + styles.layout__mobile_open}>
+                <Chat />
+            </div>
         </div>
     )
 }
