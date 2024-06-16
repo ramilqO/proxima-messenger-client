@@ -1,3 +1,5 @@
+@import "../../../../variables.scss";
+
 .chatList {
   width: 30%;
 
@@ -6,6 +8,28 @@
     flex-direction: column;
     gap: 10px;
     padding: 10px;
+  }
+
+  &__breadcrumbs {
+    height: 10vh;
+  }
+
+  &__list {
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: scroll;
+  }
+
+  &__list::-webkit-scrollbar {
+    width: 3px;
+  }
+  &__list::-webkit-scrollbar-track {
+    background: $gray;
+    border-radius: 20px;
+  }
+  &__list::-webkit-scrollbar-thumb {
+    background-color: $grayDarken;
+    border-radius: 20px;
   }
 }
 

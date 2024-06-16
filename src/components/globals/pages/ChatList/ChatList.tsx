@@ -43,6 +43,86 @@ const mockChats = [
     "lastMessageAuthor": "Alice Brown",
     "isGroupChat": true,
     "isFixed": true
+  },
+  {
+    "id": "16", // ссылка для динамического роутинга
+    "name": "Катя",
+    "avatar": undefined,
+    "lastMessage": "Hello, how are you?",
+    "lastMessageTime": "12:00:00Z",
+    "lastMessageAuthor": "John Doe",
+    "isGroupChat": false,
+    "isFixed": false  // закреплен ли чат
+  },
+  {
+    "id": "11",
+    "name": "Ярослав",
+    "avatar": undefined,
+    "lastMessage": "I've finished the task",
+    "lastMessageTime": "09:30:00Z",
+    "lastMessageAuthor": "Jane Smith",
+    "isGroupChat": false,
+    "isFixed": false
+  },
+  {
+    "id": "2",
+    "name": "ВечеринОчка🎶🎉",
+    "avatar": undefined,
+    "lastMessage": "I'm having trouble with the software",
+    "lastMessageTime": "15:45:00Z",
+    "lastMessageAuthor": "Bob Johnson",
+    "isGroupChat": true,
+    "isFixed": true
+  },
+  {
+    "id": "20",
+    "name": "New Ideas",
+    "avatar": undefined,
+    "lastMessage": "I have a new idea lorem for a project",
+    "lastMessageTime": "10:15:00Z",
+    "lastMessageAuthor": "Alice Brown",
+    "isGroupChat": true,
+    "isFixed": true
+  },
+  {
+    "id": "16", // ссылка для динамического роутинга
+    "name": "Катя",
+    "avatar": undefined,
+    "lastMessage": "Hello, how are you?",
+    "lastMessageTime": "12:00:00Z",
+    "lastMessageAuthor": "John Doe",
+    "isGroupChat": false,
+    "isFixed": false  // закреплен ли чат
+  },
+  {
+    "id": "11",
+    "name": "Ярослав",
+    "avatar": undefined,
+    "lastMessage": "I've finished the task",
+    "lastMessageTime": "09:30:00Z",
+    "lastMessageAuthor": "Jane Smith",
+    "isGroupChat": false,
+    "isFixed": false
+  },
+  {
+    "id": "2",
+    "name": "ВечеринОчка🎶🎉",
+    "avatar": undefined,
+    "lastMessage": "I'm having trouble with the software",
+    "lastMessageTime": "15:45:00Z",
+    "lastMessageAuthor": "Bob Johnson",
+    "isGroupChat": true,
+    "isFixed": true
+  },
+  {
+    "id": "20",
+    "name": "New Ideas",
+    "avatar": undefined,
+    "lastMessage": "I have a new idea lorem for a project",
+    "lastMessageTime": "10:15:00Z",
+    "lastMessageAuthor": "Alice Brown",
+    "isGroupChat": true,
+    "isFixed": true
   }
 ]
 

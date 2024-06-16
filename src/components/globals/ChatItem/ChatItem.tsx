@@ -5,6 +5,7 @@ import ChatSwitcher from "../../../store/ChatSwitcher.store";
 import { useState } from "react";
 import Chat from "../Chat/Chat";
 import { motion } from "framer-motion";
+import { createPortal } from "react-dom";
 
 type TChatItem = {
     id: string;
@@ -46,10 +47,10 @@ export default function ChatItem({ chat }: { chat: TChatItem }) {
                     </div>
                 </div>
             </div>
-            {isMobile && (open && <motion.div
+            {isMobile && (open && createPortal(<motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className={styles.chatItem__chat}><Chat /></motion.div>)}
+                className={styles.chatItem__chat}><Chat /></motion.div>, document.body))}
         </>
     )
 }
