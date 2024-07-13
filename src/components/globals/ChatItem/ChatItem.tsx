@@ -28,7 +28,9 @@ export default function ChatItem({ chat }: { chat: TChatItem }) {
             <div className={styles.chatItem} onClick={() => { ChatSwitcher.setCurrentChat(chat.id); setOpen(!open) }}>
                 <div className={styles.chatItem__wrapper}>
                     <div className={styles.chatItem__group}>
-                        <div className={styles.chatItem__avatar}>{chat.avatar ? <Avatar size="md" src={chat.avatar} /> : <RxAvatar size={40} color="gray" />}</div>
+                        <div className={styles.chatItem__avatar}>{
+                            chat.avatar ? <Avatar size="md" src={chat.avatar} /> : <RxAvatar size={40} color="gray" />}
+                        </div>
                         <div>
                             <span className={styles.chatItem__name}>{chat.name}</span>
                             {chat.whoIsTypingNow ?
@@ -47,10 +49,12 @@ export default function ChatItem({ chat }: { chat: TChatItem }) {
                     </div>
                 </div>
             </div>
-            {isMobile && (open && createPortal(<motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className={styles.chatItem__chat}><Chat /></motion.div>, document.body))}
+            {isMobile && (open && createPortal(
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className={styles.chatItem__chat}><Chat /></motion.div>,
+                document.body))}
         </>
     )
 }
