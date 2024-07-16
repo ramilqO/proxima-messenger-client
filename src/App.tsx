@@ -1,8 +1,8 @@
-import Router from './components/globals/Router/Router'
-import './App.css'
+import Router from './components/globals/Router/Router';
+import './App.css';
 
 function App() {
-  return <Router />
+  return <Router />;
 }
 
 export default App;
