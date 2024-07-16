@@ -1,10 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 
 interface ICurrentChat {
-  userId: number;
   id: number;
-  title: string;
-  body: string;
 }
 
 class ChatSwitcher {

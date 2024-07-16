@@ -7,7 +7,7 @@ import Chat from "../Chat/Chat";
 import { motion } from "framer-motion";
 import { createPortal } from "react-dom";
 
-type TChatItem = {
+export type TChatItem = {
     id: string;
     name: string;
     avatar?: string;

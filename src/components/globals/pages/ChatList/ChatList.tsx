@@ -127,8 +127,6 @@ const mockChats = [
 ]
 
 const ChatList = () => {
-  // const chats = getChats();
-
   return (
     <div className={styles.chatList}>
       <div className={styles.chatList__wrapper}>

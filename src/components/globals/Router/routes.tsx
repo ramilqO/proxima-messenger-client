@@ -1,7 +1,7 @@
 import { Navigate } from "react-router-dom";
-import Layout from "../globals/Layout/Layout";
-import Login from "../globals/pages/Login/Login";
-import Register from "../globals/pages/Register/Register";
+import Layout from "../Layout/Layout";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 
 export const publicRoutes = [
     {
@@ -22,6 +22,10 @@ export const privateRoutes = [
     {
         path: "/chats",
         element: <Layout />
+    },
+    {
+        path: "/profile",
+        element: <h1>Профиль!</h1>
     },
     {
         path: "*",
