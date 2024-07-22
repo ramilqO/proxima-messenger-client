@@ -21,7 +21,9 @@ export default function ChatItem({ chat }: { chat: TChatItem }) {
     <>
       <div
         className={styles.chatItem}
-        onClick={() => { ChatSwitcher.setCurrentChat(chat.id) }}
+        onClick={() => {
+          ChatSwitcher.setCurrentChat(chat.id);
+        }}
       >
         <div className={styles.chatItem__wrapper}>
           <div className={styles.chatItem__group}>

@@ -20,7 +20,7 @@ class WebSocketStore {
     });
 
     this.socket.on('disconnect', () => {
-      console.log("Я отключился от websocket сервера");
+      console.log('Я отключился от websocket сервера');
     });
 
     this.socket.on('message', (message: IMessage) => {
