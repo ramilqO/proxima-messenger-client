@@ -1,63 +1,21 @@
 import { makeAutoObservable } from 'mobx';
-import io, { Socket } from 'socket.io-client';
-
-export interface IMessage {
-  id: number;
-  name: string;
-  avatar: string;
-  text: string;
-  timestamp: string;
-  status: 'ok' | 'failed';
-}
+import MessageStore, { IMessage } from './Message.store.ts';
 
 class ChatStore {
-  messages: IMessage[] = [];
+  messageStore: MessageStore;
   isConnected = false;
-  socket: Socket | null = null;
 
-  constructor() {
+  constructor(messageStore: MessageStore) {
+    this.messageStore = messageStore;
     makeAutoObservable(this);
-    this.initSocket();
   }
 
-  initSocket() {
-    this.socket = io('http://your-websocket-server.com');
-
-    this.socket.on('connect', () => {
-      this.isConnected = true;
-    });
-
-    this.socket.on('disconnect', () => {
-      this.isConnected = false;
-    });
-
-    this.socket.on('message', message => {
-      this.addMessage(message);
-    });
-
-    this.socket.on('error', error => {
-      console.error('Socket.IO error:', error);
-    });
+  getMessagesByChatId(chatId: string): IMessage[] {
+    return this.messageStore.getMessagesByChatId(chatId);
   }
 
-  addMessage(message: IMessage) {
-    this.messages = [...this.messages, message];
-  }
-
-  sendMessage(message: IMessage) {
-    this.socket?.emit('message', message);
-  }
-
-  connect() {
-    if (!this.socket || !this.socket.connected) {
-      this.initSocket();
-    }
-  }
-
-  disconnect() {
-    if (this.socket && this.socket.connected) {
-      this.socket.disconnect();
-    }
+  loadMessages(chatId: string) {
+    this.messageStore.loadMessagesFromStorage(chatId);
   }
 }
 

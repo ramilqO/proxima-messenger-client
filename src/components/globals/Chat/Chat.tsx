@@ -1,15 +1,20 @@
 import { observer } from 'mobx-react-lite';
-import styles from './Chat.module.scss';
-import { motion } from 'framer-motion';
 
-const Chat = observer(() => {
+
+const ChatDesktop = observer(() => {
   return (
-    <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} className={styles.chat}>
-      <div className={styles.chat__wrapper}>
-        <h1>I am a chat</h1>
-      </div>
-    </motion.div>
-  );
-});
+    <div>
+      <h1>Десктопная версия чата</h1>
+    </div>
+  )
+})
 
-export default Chat;
+const ChatMobile = observer(() => {
+  return (
+    <div>
+      Мобильная версия чата
+    </div>
+  )
+})
+
+export default { ChatDesktop, ChatMobile };

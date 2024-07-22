@@ -2,10 +2,6 @@ import { RxAvatar } from 'react-icons/rx';
 import Avatar from '../../ui/Avatar/Avatar';
 import styles from './ChatItem.module.scss';
 import ChatSwitcher from '../../../store/ChatSwitcher.store';
-import { useState } from 'react';
-import Chat from '../Chat/Chat';
-import { motion } from 'framer-motion';
-import { createPortal } from 'react-dom';
 
 export type TChatItem = {
   id: string;
@@ -19,18 +15,13 @@ export type TChatItem = {
 };
 
 export default function ChatItem({ chat }: { chat: TChatItem }) {
-  const [open, setOpen] = useState(false);
-
-  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+  // const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
   return (
     <>
       <div
         className={styles.chatItem}
-        onClick={() => {
-          ChatSwitcher.setCurrentChat(chat.id);
-          setOpen(!open);
-        }}
+        onClick={() => { ChatSwitcher.setCurrentChat(chat.id) }}
       >
         <div className={styles.chatItem__wrapper}>
           <div className={styles.chatItem__group}>
@@ -59,18 +50,6 @@ export default function ChatItem({ chat }: { chat: TChatItem }) {
           </div>
         </div>
       </div>
-      {isMobile &&
-        open &&
-        createPortal(
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className={styles.chatItem__chat}
-          >
-            <Chat />
-          </motion.div>,
-          document.body,
-        )}
     </>
   );
 }
