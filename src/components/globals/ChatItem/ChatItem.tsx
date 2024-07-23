@@ -15,8 +15,6 @@ export type TChatItem = {
 };
 
 export default function ChatItem({ chat }: { chat: TChatItem }) {
-  // const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
   return (
     <>
       <div

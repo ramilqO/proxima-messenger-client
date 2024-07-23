@@ -1,15 +1,15 @@
 import { observer } from 'mobx-react-lite';
+import styles from "./Chat.module.scss";
+import ChatSwitcherStore from '../../../store/ChatSwitcher.store';
 
-const ChatDesktop = observer(() => {
-  return (
-    <div>
-      <h1>Десктопная версия чата</h1>
+export const ChatDesktop = observer(() => {
+  return ChatSwitcherStore.currentChat ? (
+    <div className={styles.chat}>
+      <h1>ID чата: {ChatSwitcherStore.currentChat.id}</h1>
     </div>
-  );
+  ) : <h1>Выберите чат</h1>
 });
 
-const ChatMobile = observer(() => {
-  return <div>Мобильная версия чата</div>;
+export const ChatMobile = observer(() => {
+  return ChatSwitcherStore.currentChat && <div>ID чата: {ChatSwitcherStore.currentChat.id}</div>;
 });
-
-export default { ChatDesktop, ChatMobile };
