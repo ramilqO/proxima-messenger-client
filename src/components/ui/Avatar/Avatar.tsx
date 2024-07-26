@@ -1,7 +1,7 @@
 import styles from './Avatar.module.scss';
 
 interface IAvatar {
-  size: 'lg' | 'md' | 'sm';
+  size: 'lg' | 'md' | 'sm' | "ex-sm";
   src: string;
 }
 export default function Avatar({ size, src }: IAvatar) {

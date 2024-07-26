@@ -3,15 +3,53 @@ import { makeAutoObservable } from 'mobx';
 export interface IMessage {
   id: number;
   chatId: string; // Идентификатор чата
-  name: string;
-  avatar: string;
+  userId: string;
+  userName: string;
+  userAvatar: string;
   text: string;
   timestamp: string;
   status: 'ok' | 'failed';
 }
 
 class MessageStore {
-  messages: Record<string, IMessage[]> = {}; // Храним сообщения по чатам
+  messages: Record<string, IMessage[]> = {
+    'chat-1': [
+      {
+        id: 1,
+        chatId: 'chat-1',
+        userId: 'user-1',
+        userName: 'Alice',
+        userAvatar: 'https://example.com/avatar1.png',
+        text: 'Привет, как дела?',
+        timestamp: '2024-07-26T10:00:00Z',
+        status: 'ok',
+      },
+      {
+        id: 1,
+        chatId: 'chat-1',
+        userId: 'user-1',
+        userName: 'Alice',
+        userAvatar: 'https://example.com/avatar1.png',
+        text: 'Привет, как дела?',
+        timestamp: '2024-07-26T10:00:00Z',
+        status: 'ok',
+      },
+    ],
+    'chat-2': [
+      {
+        id: 1,
+        chatId: 'chat-2',
+        userId: 'user-1',
+        userName: 'Alice',
+        userAvatar: 'https://example.com/avatar1.png',
+        text: 'Привет, как дела?',
+        timestamp: '2024-07-26T10:00:00Z',
+        status: 'ok',
+      },
+    ],
+    'chat-3': [], // Пустой чат, в который еще не добавлено сообщений
+  }; // Храним сообщения по чатам
+  // TODO: ПЕРЕДЕЛАТЬ СТРУКУТУРУ ЭТОГО СТОРА Т.К ВГЛЯДИТ КОСТЫЛЬНО
 
   constructor() {
     makeAutoObservable(this);

@@ -1,0 +1,61 @@
+@import "../../../variables.scss";
+
+.chatMobile {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background: $gray;
+  }
+
+  .info {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid $grayDarken;
+
+    &__wrapper {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__group:nth-child(3) {
+      flex-direction: column;
+      align-items: flex-start ;
+      gap: 0;
+    }
+
+    &__name {
+      width: 100%;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    &__online {
+      font-size: 12px;
+    }
+  }
+
+  .actionBtn {
+    background: transparent;
+    border: 0;
+  }
+
+  .chat {
+    background: #d9d9d9;
+    height: 100%;
+
+    &__wrapper {
+      padding: 5px;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+  }

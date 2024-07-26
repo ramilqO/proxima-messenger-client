@@ -3,7 +3,7 @@ import Avatar from '../../ui/Avatar/Avatar';
 import styles from './ChatItem.module.scss';
 import ChatSwitcher from '../../../store/ChatSwitcher.store';
 
-export type TChatItem = {
+export interface IChatItem {
   id: string;
   name: string;
   avatar?: string;
@@ -12,9 +12,9 @@ export type TChatItem = {
   lastMessageAuthor: string;
   whoIsTypingNow?: string;
   isGroupChat: boolean;
-};
+}
 
-export default function ChatItem({ chat }: { chat: TChatItem }) {
+export default function ChatItem({ chat }: { chat: IChatItem }) {
   return (
     <>
       <div

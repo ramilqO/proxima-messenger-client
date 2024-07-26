@@ -1,6 +1,6 @@
 // import { getChats } from "../../../../utils/getChats";
-import Input from '../../../ui/Input/Input';
-import ChatItem from '../../ChatItem/ChatItem';
+import Input from '../../ui/Input/Input';
+import ChatItem from '../ChatItem/ChatItem';
 import styles from './ChatList.module.scss';
 
 const mockChats = [
