@@ -1,61 +1,69 @@
-@import "../../../variables.scss";
+@import '../../../variables.scss';
 
 .chatMobile {
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    background: $gray;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: $gray;
+}
+
+.info {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  min-height: 10vh;
+  background: gray;
+  backdrop-filter: blur(1px);
+
+  &__wrapper {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .info {
-    position: sticky;
-    top: 0;
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__group:nth-child(3) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  &__name {
     width: 100%;
-    border-bottom: 1px solid $grayDarken;
-
-    &__wrapper {
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    &__group {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    &__group:nth-child(3) {
-      flex-direction: column;
-      align-items: flex-start ;
-      gap: 0;
-    }
-
-    &__name {
-      width: 100%;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    &__online {
-      font-size: 12px;
-    }
+    font-size: 14px;
+    font-weight: 600;
   }
 
-  .actionBtn {
-    background: transparent;
-    border: 0;
+  &__online {
+    font-size: 12px;
   }
+}
 
-  .chat {
-    background: #d9d9d9;
-    height: 100%;
+.actionBtn {
+  background: transparent;
+  border: 0;
+}
 
-    &__wrapper {
-      padding: 5px;
-      display: flex;
-      gap: 10px;
-      flex-direction: column;
-    }
+.chat {
+  background: #d9d9d9;
+  flex-grow: 3;
+  overflow-y: auto;
+
+  &__wrapper {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 100px;
   }
+}

@@ -3,7 +3,7 @@ import stylesM from "./ChatMobile.module.scss";
 
 import { observer } from 'mobx-react-lite';
 import ChatSwitcherStore from '../../../store/ChatSwitcher.store';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import isMobile from '../../../utils/isMobile';
 import { IoArrowBackSharp } from 'react-icons/io5';
 import Avatar from '../../ui/Avatar/Avatar';
@@ -11,6 +11,7 @@ import UserStore from '../../../store/User.store';
 import { RxAvatar } from 'react-icons/rx';
 import { IoIosCall, IoIosInformationCircleOutline } from "react-icons/io";
 import Message from "../../ui/Message/Message";
+import { useEffect, useRef } from "react";
 
 export const ChatDesktop = observer(() => {
   return (
@@ -24,79 +25,257 @@ export const ChatDesktop = observer(() => {
 });
 
 export const ChatMobile = observer(() => {
-  return ChatSwitcherStore.currentChat && (
-    <motion.div
-      className={stylesM.chatMobile}
-      initial={{ opacity: 0, x: '100%' }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: '-100%' }}
-      transition={{ duration: 0.2 }}
-    >
-      <div className={stylesM.info}>
-        <div className={stylesM.info__wrapper}>
-          <div className={stylesM.info__group}>
-            <button className={stylesM.actionBtn} onClick={() => ChatSwitcherStore.currentChat = null}>
-              <IoArrowBackSharp size={20} />
-            </button>
-            {UserStore.avatar ? <Avatar size="md" src={UserStore.avatar} /> : <RxAvatar size={35} />}
-            <div className={stylesM.info__group}>
-              <span className={stylesM.info__name}>Рамиль Османов</span>
-              <span className={stylesM.info__online}>Сегодня, 10:30</span>
+  const scrollableRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (scrollableRef.current) {
+      scrollableRef.current.scrollTop = scrollableRef.current.scrollHeight;
+    }
+  })
+
+
+  return <AnimatePresence>
+    {
+      ChatSwitcherStore.currentChat && (
+        <motion.div
+          className={stylesM.chatMobile}
+          initial={{ x: '-100%', opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className={stylesM.info}>
+            <div className={stylesM.info__wrapper}>
+              <div className={stylesM.info__group}>
+                <button className={stylesM.actionBtn} onClick={() => ChatSwitcherStore.currentChat = null}>
+                  <IoArrowBackSharp size={20} />
+                </button>
+                {UserStore.avatar ? <Avatar size="md" src={UserStore.avatar} /> : <RxAvatar size={35} />}
+                <div className={stylesM.info__group}>
+                  <span className={stylesM.info__name}>Рамиль Османов</span>
+                  <span className={stylesM.info__online}>Сегодня, 10:30</span>
+                </div>
+              </div>
+              <div className={stylesM.info__group}>
+                <IoIosCall size={20} />
+                <IoIosInformationCircleOutline size={20} />
+              </div>
             </div>
           </div>
-          <div className={stylesM.info__group}>
-            <IoIosCall size={20} />
-            <IoIosInformationCircleOutline size={20} />
-          </div>
-        </div>
-      </div>
 
-      <div className={stylesM.chat}>
-        <div className={stylesM.chat__wrapper}>
-          <Message message={{
-            id: 2,
-            chatId: "121092",// Идентификатор чата
-            userId: "12109",
-            userName: "Рамиль Османов",
-            userAvatar: "",
-            text: "Привет, на днях решил взяться за проект",
-            timestamp: "20.07.2024",
-            status: 'ok'
-          }} />
-          <Message message={{
-            id: 2,
-            chatId: "121092",// Идентификатор чата
-            userId: "12109",
-            userName: "Рамиль Османов",
-            userAvatar: "",
-            text: "Привет, на днях решил взяться за проект",
-            timestamp: "20.07.2024",
-            status: 'ok'
-          }} /><Message message={{
-            id: 2,
-            chatId: "121092",// Идентификатор чата
-            userId: "12109",
-            userName: "Рамиль Османов",
-            userAvatar: "",
-            text: "Привет, на днях решил взяться за проект",
-            timestamp: "20.07.2024",
-            status: 'ok'
-          }} /><Message message={{
-            id: 2,
-            chatId: "121092",// Идентификатор чата
-            userId: "12109",
-            userName: "Рамиль Османов",
-            userAvatar: "",
-            text: "Привет, на днях решил взяться за проект",
-            timestamp: "20.07.2024",
-            status: 'ok'
-          }} />
-        </div>
-      </div>
-    </motion.div>
-  );
+          <div className={stylesM.chat} ref={scrollableRef}>
+            <div className={stylesM.chat__wrapper}>
+              <Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} />
+              <Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} /><Message message={{
+                id: 2,
+                chatId: "121092",// Идентификатор чата
+                userId: "12109",
+                userName: "Рамиль Османов",
+                userAvatar: "",
+                text: "Привет, на днях решил взяться за проект",
+                timestamp: "20.07.2024",
+                status: 'ok'
+              }} />
+            </div>
+          </div>
+          <div className={stylesM.textarea}>
+            <h1>Я тут</h1>
+          </div>
+        </motion.div>
+      )
+    }
+  </AnimatePresence>
 });
 
-export const Chat = observer(() => {
+export const Chat = () => {
   return isMobile() ? <ChatMobile /> : <ChatDesktop />;
-})
+}
