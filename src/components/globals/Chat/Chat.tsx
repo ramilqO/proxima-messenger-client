@@ -10,7 +10,7 @@ import Avatar from '../../ui/Avatar/Avatar';
 import UserStore from '../../../store/User.store';
 import { RxAvatar } from 'react-icons/rx';
 import { IoIosCall, IoIosInformationCircleOutline } from "react-icons/io";
-import Message from "../../ui/Message/Message";
+import Message from "../Message/Message";
 import { useEffect, useRef } from "react";
 import Textarea from "../../ui/Textarea/Textarea";
 
@@ -74,7 +74,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} />
               <Message message={{
                 id: 2,
@@ -84,7 +85,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -93,7 +95,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -102,7 +105,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -111,7 +115,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -120,7 +125,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -129,7 +135,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -138,7 +145,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -147,7 +155,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -156,7 +165,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -165,7 +175,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -174,7 +185,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -183,7 +195,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -192,7 +205,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -201,7 +215,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -210,7 +225,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -219,7 +235,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -228,7 +245,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -237,7 +255,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -246,7 +265,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -255,7 +275,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -264,7 +285,8 @@ export const ChatMobile = observer(() => {
                 userAvatar: "",
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
-                status: 'ok'
+                status: 'ok',
+                showAvatar: false
               }} />
             </div>
           </div>
