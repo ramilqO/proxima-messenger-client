@@ -39,10 +39,10 @@ export const ChatMobile = observer(() => {
       ChatSwitcherStore.currentChat && (
         <motion.div
           className={stylesM.chatMobile}
-          initial={{ x: '-100%', opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2 }}
         >
           <div className={stylesM.info}>
             <div className={stylesM.info__wrapper}>
