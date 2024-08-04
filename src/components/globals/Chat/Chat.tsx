@@ -12,6 +12,7 @@ import { RxAvatar } from 'react-icons/rx';
 import { IoIosCall, IoIosInformationCircleOutline } from "react-icons/io";
 import Message from "../../ui/Message/Message";
 import { useEffect, useRef } from "react";
+import Input from "../../ui/Input/Input";
 
 export const ChatDesktop = observer(() => {
   return (
@@ -268,7 +269,7 @@ export const ChatMobile = observer(() => {
             </div>
           </div>
           <div className={stylesM.textarea}>
-            <h1>Я тут</h1>
+            <Input placeholder={"Сообщение"} size="md" />
           </div>
         </motion.div>
       )

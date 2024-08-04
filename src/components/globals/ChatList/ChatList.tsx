@@ -1,4 +1,5 @@
 // import { getChats } from "../../../../utils/getChats";
+import { IoIosSearch } from 'react-icons/io';
 import Input from '../../ui/Input/Input';
 import ChatItem from '../ChatItem/ChatItem';
 import styles from './ChatList.module.scss';
@@ -132,7 +133,8 @@ const ChatList = () => {
       <div className={styles.chatList__wrapper}>
         <div className={styles.chatList__breadcrumbs}>
           <h2>Сообщения</h2>
-          <Input placeholder='Search' />
+          <Input placeholder='Search' size='sm' icon={<IoIosSearch size={25} color='gray' />
+          } />
         </div>
 
         <div className={styles.chatList__list}>

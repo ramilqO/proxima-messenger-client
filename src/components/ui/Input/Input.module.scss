@@ -9,6 +9,7 @@
   align-items: center;
   gap: 5px;
 
+
   &__elem {
     border: 1px solid transparent;
     background-color: $gray;
@@ -27,4 +28,19 @@
   &__elem:focus-visible {
     outline: none;
   }
+}
+
+.sm {
+  padding: 2px;
+  font-size: 16px;
+}
+
+.md {
+  padding: 5px;
+  font-size: 18px;
+}
+
+.lg {
+  padding: 10px;
+  font-size: 20px;
 }
