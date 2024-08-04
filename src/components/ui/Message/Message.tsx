@@ -10,7 +10,6 @@ export default function Message({ message }: { message: IMessage }) {
                     <Avatar size="ex-sm" src={"https://w-dog.ru/wallpapers/16/18/497909214965375/nejtiri-navi-avatar.jpg"} />
                 </div>
                 <div className={styles.message__content}>
-                    <div className={styles.message__username}>{message.userName}</div>
                     <div className={styles.message__text}>{message.text}</div>
                 </div>
             </div>

@@ -1,7 +1,24 @@
+@import "../../../variables.scss";
+
 .message {
-    border: 1px solid black;
+    max-width: 90%;
 
     &__wrapper {
         display: flex;
+        align-items: flex-end;
+        gap: 5px;
+    }
+
+    &__content {
+        padding: 10px;
+        background-color: $gray;
+        border: 0;
+        border-radius: 10px;
+    }
+
+    &__text {
+        font-size: medium;
+        letter-spacing: -1px;
+        font-weight: 500;
     }
 }
