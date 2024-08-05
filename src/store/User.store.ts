@@ -1,5 +1,5 @@
 import { makeAutoObservable, runInAction } from 'mobx';
-import { TChatItem } from '../components/globals/ChatItem/ChatItem';
+import { IChatItem } from '../components/globals/ChatItem/ChatItem';
 
 interface UserData {
   id: number;
@@ -7,16 +7,16 @@ interface UserData {
   email: string;
   avatar: string;
   isLoggedIn: boolean;
-  chats: TChatItem[];
+  chats: IChatItem[];
 }
 
 class UserStore {
-  id: number | null = null;
+  id: number | string = '';
   name: string = '';
   email: string = '';
   avatar: string = '';
   isLoggedIn: boolean = false;
-  chats: TChatItem[] = [];
+  chats: IChatItem[] = [];
 
   constructor() {
     makeAutoObservable(this);

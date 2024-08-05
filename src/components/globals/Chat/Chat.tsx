@@ -13,6 +13,8 @@ import { IoIosCall, IoIosInformationCircleOutline } from "react-icons/io";
 import Message from "../Message/Message";
 import { useEffect, useRef } from "react";
 import Textarea from "../../ui/Textarea/Textarea";
+import { GoPaperclip } from "react-icons/go";
+
 
 export const ChatDesktop = observer(() => {
   return (
@@ -75,7 +77,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return true;
+                }
               }} />
               <Message message={{
                 id: 2,
@@ -86,7 +91,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -96,7 +104,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -106,7 +117,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return true;
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -116,7 +130,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -126,7 +143,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -136,7 +156,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -146,7 +169,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -156,7 +182,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -166,7 +195,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -176,7 +208,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return true;
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -186,7 +221,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return true;
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -196,7 +234,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -206,7 +247,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -216,7 +260,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -226,7 +273,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return true;
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -236,7 +286,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -246,7 +299,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -256,7 +312,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -266,7 +325,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return this.userId === String(UserStore.id)
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -276,7 +338,10 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return true;
+                }
               }} /><Message message={{
                 id: 2,
                 chatId: "121092",// Идентификатор чата
@@ -286,12 +351,16 @@ export const ChatMobile = observer(() => {
                 text: "Привет, на днях решил взяться за проект",
                 timestamp: "20.07.2024",
                 status: 'ok',
-                showAvatar: false
+                showAvatar: false,
+                isSender() {
+                  return true;
+                }
               }} />
             </div>
           </div>
-          <div className={stylesM.textarea}>
+          <div className={stylesM.textareaContainer}>
             <Textarea placeholder="Сообщение" size="md" rows={1} />
+            <GoPaperclip size={20} />
           </div>
         </motion.div>
       )

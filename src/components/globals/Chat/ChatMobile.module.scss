@@ -65,7 +65,15 @@
     display: flex;
     gap: 10px;
     flex-direction: column;
+    padding-top: 70px;
     justify-content: flex-end;
-    padding-top: 100px;
   }
+}
+
+.textareaContainer {
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }

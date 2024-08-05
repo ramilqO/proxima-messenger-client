@@ -1,24 +1,33 @@
-@import "../../../variables.scss";
+@import '../../../variables.scss';
 
 .message {
-    max-width: 90%;
+  max-width: 90%;
+  margin-right: auto;
 
-    &__wrapper {
-        display: flex;
-        align-items: flex-end;
-        gap: 5px;
-    }
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+  }
 
-    &__content {
-        padding: 10px;
-        background-color: $gray;
-        border: 0;
-        border-radius: 10px;
-    }
+  &__content {
+    padding: 10px;
+    background-color: $gray;
+    border: 0;
+    border-radius: 10px;
+  }
 
-    &__text {
-        font-size: medium;
-        letter-spacing: -1px;
-        font-weight: 500;
-    }
+  &__text {
+    font-size: medium;
+    letter-spacing: -1px;
+    font-weight: 500;
+  }
+}
+
+.message_sender {
+  margin-left: 9%;
+
+  &__content {
+    background-color: $grayDarken;
+  }
 }

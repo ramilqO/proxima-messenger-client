@@ -1,6 +1,7 @@
 @import '../../../variables.scss';
 
 .textarea {
+  width: 100%;
   padding: 3px;
   border: 0;
   border-radius: 7px;
@@ -10,7 +11,7 @@
   gap: 5px;
 
   &__elem {
-    border: 1px solid transparent;
+    border: 0;
     background-color: $gray;
     width: 100%;
   }
